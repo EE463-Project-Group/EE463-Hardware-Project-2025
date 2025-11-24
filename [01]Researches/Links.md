@@ -46,4 +46,4 @@
 
 - https://tronicspro.com/12v-220v-h-bridge-inverter-diy-homemade/
 - https://www.hackster.io/saulius-bandzevicius/arduino-based-universal-ac-motor-speed-controller-a4ceaf
-- 
+
