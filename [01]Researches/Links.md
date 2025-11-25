@@ -24,12 +24,14 @@
 ## Motor Speed Controller with Arduino:
 
 - https://www.instructables.com/DIY-High-Current-Motor-Driver-h-bridge/?utm_source=chatgpt.com
-- https://hackaday.io/project/9433-brushed-dc-servo-drive
 - https://www.bristolwatch.com/ele5/index0.htm
 - https://www.homemade-circuits.com/treadmill-motor-speed-controller-circuit/
 - https://www.hackster.io/tareqwaleed1996/pid-speed-controller-for-dc-motor-74e735
+- https://www.youtube.com/watch?v=RZIfzPwglOo
+- https://www.youtube.com/watch?v=PlZitQysnUg&t=294s
+- https://www.powerelectronicsnews.com/powerful-isolated-h-bridge-dc-motor-driver/
 
-### MC-2100 Motor COntroller:
+### MC-2100 Motor Controller:
 
 - https://forum.arduino.cc/t/another-treadmill-controller-question/676459/4
 - https://sonsofinvention.wordpress.com/tag/mc-2100-motor-controller/
@@ -37,13 +39,23 @@
 
 ---
 
+# Brushed DC Servo Drive:
+
+- https://hackaday.io/project/9433-brushed-dc-servo-drive
+- https://github.com/ottoragam/Tarocco
+- 
+
+---
+
 ## Arduino Library:
 
 - https://github.com/ArminJo/PWMMotorControl
+- https://github.com/evanlivingston/MC-2100-motor-speed-controller
 
 
 ## Not Related But Could Be Useful:
 
 - https://tronicspro.com/12v-220v-h-bridge-inverter-diy-homemade/
 - https://www.hackster.io/saulius-bandzevicius/arduino-based-universal-ac-motor-speed-controller-a4ceaf
+- https://www.youtube.com/watch?v=HRaZLCBFVDE
 
