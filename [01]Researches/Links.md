@@ -52,6 +52,9 @@
 - https://github.com/ArminJo/PWMMotorControl
 - https://github.com/evanlivingston/MC-2100-motor-speed-controller
 
+## HV Floating MOS-Gate Driver ICs
+- https://www.infineon.com/assets/row/public/documents/24/42/infineon-hv-floating-mos-gate-drivers-applicationnotes-en.pdf
+
 
 ## Not Related But Could Be Useful:
 
