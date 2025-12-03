@@ -67,6 +67,9 @@
 
 - https://sites.google.com/site/hobbydebraj/dc-motor-control-using-back-emf-sen
 - https://www.youtube.com/watch?v=QSIksPKndEs
+- https://www.youtube.com/watch?v=HRaZLCBFVDE&t=157s
+- https://www.youtube.com/watch?v=GqsONhTx7l0
+- https://www.youtube.com/watch?v=DAeiA4D0j_I
 - 
 
 ## Not Related But Could Be Useful:
