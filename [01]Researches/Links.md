@@ -30,12 +30,20 @@
 - https://www.youtube.com/watch?v=RZIfzPwglOo
 - https://www.youtube.com/watch?v=PlZitQysnUg&t=294s
 - https://www.powerelectronicsnews.com/powerful-isolated-h-bridge-dc-motor-driver/
+- https://www.youtube.com/watch?v=d0r-Yx9R3Zs&list=WL&index=8
 
 ### MC-2100 Motor Controller:
 
 - https://forum.arduino.cc/t/another-treadmill-controller-question/676459/4
 - https://sonsofinvention.wordpress.com/tag/mc-2100-motor-controller/
 - https://www.dropbox.com/scl/fi/tmqcscf03akpz0rzh73zp/MC2100_rev_engrd.pdf?rlkey=pt20dimqxo8mj2sscjw4fy294&e=2&dl=0
+
+### IR2110 Gate Driver:
+
+- https://olegkutkov.me/2018/08/01/powerful-dc-motor-driver-using-ir2110/
+- https://www.xecor.com/blog/ir2110-datasheet-pinout-features-and-applications
+- https://www.youtube.com/watch?v=d0r-Yx9R3Zs&list=WL&index=8
+- https://electronics.stackexchange.com/questions/229334/does-the-ir2110-need-a-gate-resistor
 
 ---
 
@@ -55,6 +63,11 @@
 ## HV Floating MOS-Gate Driver ICs
 - https://www.infineon.com/assets/row/public/documents/24/42/infineon-hv-floating-mos-gate-drivers-applicationnotes-en.pdf
 
+## Motor Speed And Current Control:
+
+- https://sites.google.com/site/hobbydebraj/dc-motor-control-using-back-emf-sen
+- https://www.youtube.com/watch?v=QSIksPKndEs
+- 
 
 ## Not Related But Could Be Useful:
 
