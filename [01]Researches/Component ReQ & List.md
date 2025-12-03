@@ -3,7 +3,7 @@
 ## Requirements:
 - For 180V motor Vds> 180v, but for voltage spikes and bemf reasons minimum %20 safety margin: Vds> 216V . But preferably Vds> 300V.
 - For 2kw tea bonus: Id> 11A. Starting current etc. %200 safety margin: Id> 22A
-- For 20KHz switching frequency: preferably Qg<100nC
+- For 20KHz switching frequency: preferably Qg<100nC (https://gemini.google.com/share/17e45798b182)
 
 ## Models:
 - IRF640N
