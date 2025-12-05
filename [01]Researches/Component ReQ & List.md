@@ -26,7 +26,7 @@
   -
 - ASL101215
   -https://www.hatfon.com/urun/trafo-asl-101215-0-5va-2x15v-230v-aslan
-- 
+  -https://www.pttavm.com/trafo-asl-0-5va-2x15-aslan-230v-p-114325137 (alternatif link)
   -
 - 
   -
