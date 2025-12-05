@@ -24,8 +24,8 @@
   - https://www.ozdisan.com/p/discrete-mosfetler-435/panjit-pjmh074n60frc-995056
 - 
   -
-- 
-  -
+- ASL101215
+  -https://www.hatfon.com/urun/trafo-asl-101215-0-5va-2x15v-230v-aslan
 - 
   -
 - 
