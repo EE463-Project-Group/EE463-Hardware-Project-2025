@@ -1,0 +1,120 @@
+(footprint "1500uF"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "CP, Radial series, Radial, pin pitch=10.00mm, , diameter=35mm, Electrolytic Capacitor, , http://www.vishay.com/docs/28342/058059pll-si.pdf")
+	(tags "CP Radial series Radial pin pitch 10.00mm  diameter 35mm Electrolytic Capacitor")
+	(property "Reference" "REF**"
+		(at 5 -18.75 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "337da450-459f-4f77-b15f-3bfe6e5be3de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "1500uF"
+		(at 5 18.75 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6303fbca-c96e-4ac8-bd3b-60c48235f38b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "391cb42c-3f6d-47b2-84bb-1f73602833ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "10a39162-d211-428c-b68d-1ff7827605d9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 5 0)
+		(end 22.62 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7005b0e0-1404-4c9e-b32a-3c2ba6e26fef")
+	)
+	(fp_circle
+		(center 5 0)
+		(end 22.75 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "450819ec-20ef-4d0a-933d-ce4998e24ee1")
+	)
+	(fp_circle
+		(center 5 0)
+		(end 22.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e4eff829-3ce2-474c-aced-b09007abb6e6")
+	)
+	(pad "1" thru_hole rect
+		(at -5 0)
+		(size 4 4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "77a9229c-872e-4e37-b4e5-90b046fcec4c")
+	)
+	(pad "2" thru_hole circle
+		(at 15 0)
+		(size 4 4)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "25ca5f2f-32b5-415a-ac92-489dde65f94f")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D35.0mm_P10.00mm_SnapIn.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
