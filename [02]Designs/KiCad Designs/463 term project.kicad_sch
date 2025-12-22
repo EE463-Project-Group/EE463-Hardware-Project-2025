@@ -8796,6 +8796,12 @@
 		(uuid "e3d971a6-6e21-4ab3-85cf-f1a18a3248a0")
 	)
 	(junction
+		(at 50.8 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6e796cb-dbea-40a0-a3c2-1fb69220e15f")
+	)
+	(junction
 		(at 167.64 267.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10359,6 +10365,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 83.82) (xy 59.69 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "528b6498-cd0c-4029-87c4-fb5562cf0986")
+	)
+	(wire
+		(pts
 			(xy 226.06 148.59) (xy 223.52 148.59)
 		)
 		(stroke
@@ -10696,6 +10712,16 @@
 			(type default)
 		)
 		(uuid "64266ae5-75c3-42f4-8266-c208ce40a40e")
+	)
+	(wire
+		(pts
+			(xy 50.8 83.82) (xy 52.07 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "647dcb7c-6d37-48d3-b300-63a438783fa3")
 	)
 	(wire
 		(pts
@@ -12986,6 +13012,16 @@
 			(type default)
 		)
 		(uuid "e8f04092-96c8-4e84-ae1d-44a0781c20f4")
+	)
+	(wire
+		(pts
+			(xy 49.53 83.82) (xy 50.8 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9424125-e525-43ce-8027-6fe094b28c41")
 	)
 	(wire
 		(pts
@@ -18486,7 +18522,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 41.91 87.63 0)
+		(at 50.8 87.63 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18495,7 +18532,7 @@
 		(fields_autoplaced yes)
 		(uuid "325b5a64-1d1e-4a9c-ac1c-e42b726f148b")
 		(property "Reference" "#PWR015"
-			(at 41.91 93.98 0)
+			(at 50.8 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18504,7 +18541,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 41.91 92.71 0)
+			(at 50.8 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18512,7 +18549,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 87.63 0)
+			(at 50.8 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18521,7 +18558,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 87.63 0)
+			(at 50.8 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18530,7 +18567,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 41.91 87.63 0)
+			(at 50.8 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23373,6 +23410,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDD")
+		(at 59.69 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86d647cc-8fac-4eb3-a33d-01b13055a68e")
+		(property "Reference" "#PWR0109"
+			(at 59.69 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDD"
+			(at 59.69 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDD\" , digital ground"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9732c3c8-5732-466f-a448-ef024aad7608")
+		)
+		(instances
+			(project "463 term project"
+				(path "/9eb85bbe-b7ed-4e10-9c6c-ee118bb46686"
+					(reference "#PWR0109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_BJT:BC547")
 		(at 161.29 189.23 0)
 		(unit 1)
@@ -24717,6 +24820,74 @@
 			(project "463 term project"
 				(path "/9eb85bbe-b7ed-4e10-9c6c-ee118bb46686"
 					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 45.72 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0ca6406-6c2f-4f42-b9ad-f097df285375")
+		(property "Reference" "R18"
+			(at 45.72 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 45.72 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 45.72 85.598 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 45.72 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 45.72 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6435550b-b27d-4053-8531-c12653faf5bc")
+		)
+		(pin "2"
+			(uuid "2e7d65ca-2591-411f-8598-9706b0b475b3")
+		)
+		(instances
+			(project "463 term project"
+				(path "/9eb85bbe-b7ed-4e10-9c6c-ee118bb46686"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -28814,6 +28985,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 55.88 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7c1904e-03ec-44ed-8b99-1fe3bfa1443f")
+		(property "Reference" "R19"
+			(at 55.88 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 55.88 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 55.88 85.598 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 55.88 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 55.88 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "257559c2-9c0b-42d3-a215-234d2c75d10a")
+		)
+		(pin "2"
+			(uuid "b4214f0c-10ef-4cea-8b3a-a73283208369")
+		)
+		(instances
+			(project "463 term project"
+				(path "/9eb85bbe-b7ed-4e10-9c6c-ee118bb46686"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
 		(at 271.78 262.89 0)
 		(unit 1)
@@ -31731,7 +31970,8 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 50.8 87.63 0)
+		(at 41.91 87.63 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31740,7 +31980,7 @@
 		(fields_autoplaced yes)
 		(uuid "fd3917d1-169c-4177-81ff-124ad5a79fa4")
 		(property "Reference" "#PWR094"
-			(at 50.8 92.71 0)
+			(at 41.91 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31749,7 +31989,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 50.673 91.44 0)
+			(at 42.037 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31757,7 +31997,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 88.9 0)
+			(at 41.91 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31766,7 +32006,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 88.9 0)
+			(at 41.91 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31775,7 +32015,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 50.8 87.63 0)
+			(at 41.91 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
