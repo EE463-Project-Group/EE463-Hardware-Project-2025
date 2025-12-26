@@ -12339,16 +12339,6 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 256.54) (xy 44.45 256.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c25d5e0b-3540-463b-9d12-29635a66ea8f")
-	)
-	(wire
-		(pts
 			(xy 151.13 113.03) (xy 151.13 116.84)
 		)
 		(stroke
@@ -13159,6 +13149,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 256.54) (xy 44.45 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efc2cc34-d322-4566-8633-55984e5594ce")
+	)
+	(wire
+		(pts
 			(xy 471.17 336.55) (xy 471.17 337.82)
 		)
 		(stroke
@@ -13527,6 +13527,28 @@
 		)
 		(uuid "dda6335b-c53c-47a2-8d0d-ce6720bda0b3")
 	)
+	(global_label "220V_Line"
+		(shape input)
+		(at 30.48 256.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "02e78f89-69cc-46cc-ab1f-e5aca530aca5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.9396 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "+5V_Isolated"
 		(shape input)
 		(at 562.61 331.47 0)
@@ -13875,28 +13897,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "220V_Line"
-		(shape input)
-		(at 30.48 246.38 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "282c6002-fad1-4624-a756-6e37635c6fd4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 17.9396 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -14473,28 +14473,6 @@
 			)
 		)
 	)
-	(global_label "220V_Neutral"
-		(shape input)
-		(at 33.02 256.54 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7b80c2d9-c7b1-45b6-b207-35cd1664ca33")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 17.4559 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Speed_meas"
 		(shape input)
 		(at 562.61 334.01 0)
@@ -14535,6 +14513,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "220V_Neutral"
+		(shape input)
+		(at 30.48 246.38 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8601f411-8a88-48a0-87f0-843a5c2ec7a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 14.9159 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -21151,7 +21151,7 @@
 	)
 	(symbol
 		(lib_id "Diode:1N5408")
-		(at 82.55 241.3 180)
+		(at 82.55 261.62 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21160,7 +21160,7 @@
 		(fields_autoplaced yes)
 		(uuid "68ec3760-bf57-4641-8fec-397982d6c0c0")
 		(property "Reference" "D5"
-			(at 82.55 234.95 0)
+			(at 82.55 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21168,7 +21168,7 @@
 			)
 		)
 		(property "Value" "1N5408"
-			(at 82.55 237.49 0)
+			(at 82.55 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21176,7 +21176,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
-			(at 82.55 236.855 0)
+			(at 82.55 257.175 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21185,7 +21185,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/88516/1n5400.pdf"
-			(at 82.55 241.3 0)
+			(at 82.55 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21194,7 +21194,7 @@
 			)
 		)
 		(property "Description" "1000V 3A General Purpose Rectifier Diode, DO-201AD"
-			(at 82.55 241.3 0)
+			(at 82.55 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21203,7 +21203,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 82.55 241.3 0)
+			(at 82.55 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21212,7 +21212,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 82.55 241.3 0)
+			(at 82.55 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21227,7 +21227,7 @@
 			(uuid "4bc385db-f9ca-4bfd-8eb6-bb7b03d58889")
 		)
 		(instances
-			(project ""
+			(project "463 term project"
 				(path "/9eb85bbe-b7ed-4e10-9c6c-ee118bb46686"
 					(reference "D5")
 					(unit 1)
@@ -30826,16 +30826,15 @@
 	)
 	(symbol
 		(lib_id "Diode:1N5408")
-		(at 82.55 261.62 180)
+		(at 82.55 241.3 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e9e94f15-994c-4bff-b21a-5e05c8c2208c")
 		(property "Reference" "D24"
-			(at 82.55 255.27 0)
+			(at 82.55 234.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30843,7 +30842,7 @@
 			)
 		)
 		(property "Value" "1N5408"
-			(at 82.55 257.81 0)
+			(at 82.55 237.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30851,7 +30850,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
-			(at 82.55 257.175 0)
+			(at 82.55 236.855 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30860,7 +30859,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/88516/1n5400.pdf"
-			(at 82.55 261.62 0)
+			(at 82.55 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30869,7 +30868,7 @@
 			)
 		)
 		(property "Description" "1000V 3A General Purpose Rectifier Diode, DO-201AD"
-			(at 82.55 261.62 0)
+			(at 82.55 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30878,7 +30877,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 82.55 261.62 0)
+			(at 82.55 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30887,7 +30886,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 82.55 261.62 0)
+			(at 82.55 241.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)

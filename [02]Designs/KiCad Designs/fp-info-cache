@@ -1,4 +1,4 @@
-24856228355842364
+24912574287574253
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -64644,13 +64644,6 @@ solder jumper open
 0
 3
 3
-KBPC3510FP
-KBPC3510FP
-
-
-0
-4
-4
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
@@ -65876,84 +65869,91 @@ METUPowerLab_Capacitors_AluminumPolymer_ThroughHole
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_AluminumPolymers_ThroughHoles
+8.00x13.50mm
+8.0013.50mm
+
+0
+2
+2
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Large
 Capacitor 0603 Large
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Large NS
 Capacitor 0603 Large No Silkscreen
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Medium
 Capacitor 0603 Medium
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Medium NS
 Capacitor 0603 Medium No Silkscreen
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Small
 Capacitor 0603 Small
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 0603 Small NS
 Capacitor 0603 Small No Silkscreen
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Large
 Capacitor 1210 Large
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Large NS
 Capacitor 1210 Large No Silkscreen
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Medium
 Capacitor 1210 Medium 
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Medium NS
 Capacitor 1210 Medium No Silkscreen
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Small 
 Capacitor 1210 Small 
 
 0
 2
 2
-METUPowerLab_Capacitors_Ceramics_SurfaceMounts
+METUPowerLab_Capacitors_Ceramics_SurfaceMounts_1
 1210 Small NS
 Capacitor 1210 Small No Silkscreen
 
@@ -66002,6 +66002,13 @@ Ferrite Bead 0603 Small No Silkscreen
 0
 2
 2
+METUPowerLab_CircuitProtections_IdealDiodes
+SOT-23-6
+SOT-23-6
+
+0
+6
+6
 METUPowerLab_CircuitProtections_MultipleProtectors
 23-LQFN-CLIP (VMA)
 23-LQFN-CLIP (VMA)
@@ -66009,6 +66016,76 @@ METUPowerLab_CircuitProtections_MultipleProtectors
 0
 46
 24
+METUPowerLab_CircuitProtections_MultipleProtectors
+24-VFQFN
+24-VFQFN
+
+0
+31
+25
+METUPowerLab_Connectors_Headers
+61300211121
+1x2
+
+0
+2
+2
+METUPowerLab_Connectors_Headers
+FTSH-120-04-F-DH-A
+FTSH-120-04-F-DH-A
+
+0
+40
+40
+METUPowerLab_Connectors_PowerConnectors
+2002411212
+2002411212
+
+0
+2
+2
+METUPowerLab_Connectors_SignalConnectors
+384471-E
+384471-E
+
+0
+8
+5
+METUPowerLab_Connectors_SignalConnectors
+0430451209
+0430451209
+
+0
+14
+13
+METUPowerLab_Connectors_SignalConnectors
+0430451809
+0430451809
+
+0
+20
+19
+METUPowerLab_Connectors_SignalConnectors
+FTSH-120-04-F-DH-A
+FTSH-120-04-F-DH-A
+
+0
+40
+40
+METUPowerLab_Connectors_USBConnectors_TYPE-C
+USB4105
+USB4105
+
+0
+20
+17
+METUPowerLab_Diodes_SchottkyDiodes
+SOD-323
+SOD-323
+
+0
+2
+2
 METUPowerLab_Diodes_TVSDiodes
 0201 Medium
 TVS Diode 0201 Medium
@@ -66086,6 +66163,13 @@ TVS Diode DO-214AA
 0
 2
 2
+METUPowerLab_Diodes_TVSDiodes
+SOD-323
+SOD-323
+
+0
+2
+2
 METUPowerLab_Fuses_PTCs
 0603 Large
 PTC 0603 Large
@@ -66136,12 +66220,103 @@ METUPowerLab_Inductors_SurfaceMounts
 2
 2
 METUPowerLab_Inductors_SurfaceMounts
+6x5_7mm
+6*5.7mm
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
 6x5_7mm 
 6*5.7mm
 
 0
 2
 2
+METUPowerLab_Inductors_SurfaceMounts
+6x6mm
+6*6mm
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Large
+Inductor 1210 Large
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Large NS
+Inductor 1210 Large No Silkscreen
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Medium
+Inductor 1210 Medium 
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Medium NS
+Inductor 1210 Medium No Silkscreen
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Small 
+Inductor 1210 Small 
+
+0
+2
+2
+METUPowerLab_Inductors_SurfaceMounts
+1210 Small NS
+Inductor 1210 Small No Silkscreen
+
+0
+2
+2
+METUPowerLab_Interfaces_CAN
+8-SOIC
+
+
+0
+8
+8
+METUPowerLab_Interfaces_CANBusBridges
+8-SOIC
+
+
+0
+8
+8
+METUPowerLab_Interfaces_USBBridges
+48-LQFP
+48-LQFP
+
+0
+48
+48
+METUPowerLab_Interfaces_USBPD
+TSSOP-16
+4.4x5mm - P0.65mm
+
+0
+16
+16
+METUPowerLab_Isolators_USB
+16-SOIC-IC
+16-SOIC-IC
+
+0
+16
+16
 METUPowerLab_LEDs_SurfaceMounts
 0603 Large
 LED 0603 Large
@@ -66198,6 +66373,13 @@ SOT-23-5
 0
 5
 5
+METUPowerLab_Memories_EEPROM
+SOT-23-6
+SOT-23-6
+
+0
+6
+6
 METUPowerLab_MotorDrivers_BLDC
 48-VQFN
 48-VQFN
@@ -66212,6 +66394,13 @@ METUPowerLab_Oscillators_Crystals
 0
 4
 3
+METUPowerLab_Oscillators_Crystals
+4-SMD_3.2x2.5mm
+4-SMD_3.2x2.5mm
+
+0
+4
+3
 METUPowerLab_Regulators_BuckConverters
 SOT-23-6
 SOT-23-6
@@ -66219,6 +66408,13 @@ SOT-23-6
 0
 6
 6
+METUPowerLab_Regulators_LDOs
+SOT-223
+SOT-223
+
+0
+4
+3
 METUPowerLab_Regulators_LinearandSwitching
 32-VQFN
 32-VQFN
@@ -66268,6 +66464,20 @@ Resistor 0603 Small No Silkscreen
 0
 2
 2
+METUPowerLab_Resistors_ShuntResistors
+2512
+2512
+
+0
+2
+2
+METUPowerLab_Sensors_Encoders
+16-VFQFN
+16-VFQFN
+
+0
+22
+17
 METUPowerLab_Sensors_Temperature
 SC-70-5
 SC-70-5
@@ -66297,6 +66507,13 @@ METUPowerLab_Transistors_MOSFETs
 15
 5
 METUPowerLab_Transistors_MOSFETs
+8-PowerTDFN(5x6mm)Dual
+8-PowerTDFN (5*6mm) Dual
+
+0
+24
+6
+METUPowerLab_Transistors_MOSFETs
 CSD19535KTT
 
 
@@ -66310,6 +66527,13 @@ CSD88599Q5DC
 0
 29
 6
+METUPowerLab_Transistors_MOSFETs
+SOT-23
+SOT-23
+
+0
+3
+3
 METUPowerLab_Transistors_PowerBlocks
 22-PowerTFDFN
 22-PowerTFDFN
