@@ -39,7 +39,7 @@
 		(tenting front back)
 		(grid_origin 256.75 127.5)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_57555551)
+			(layerselection 0x00000000_00000000_5555555d_55555550)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -73,7 +73,7 @@
 			(crossoutdnponfab yes)
 			(subtractmaskfromsilk no)
 			(outputformat 5)
-			(mirror yes)
+			(mirror no)
 			(drillshape 2)
 			(scaleselection 1)
 			(outputdirectory "SVG Files/")
