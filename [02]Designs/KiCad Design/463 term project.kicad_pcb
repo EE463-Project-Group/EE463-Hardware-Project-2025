@@ -49237,7 +49237,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x03_Pin"
+		(property "Value" "Speed Measurement Sensor Connector"
 			(at 0 7.41 0)
 			(layer "F.Fab")
 			(uuid "94c5bc18-5821-420d-8f35-ae94d039e37d")
