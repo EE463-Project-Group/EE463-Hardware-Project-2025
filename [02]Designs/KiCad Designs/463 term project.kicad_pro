@@ -485,7 +485,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "SVG Files/",
+      "plot": "Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../../../../../463 term project.step",
