@@ -13398,34 +13398,14 @@
 		(uuid "ff14104c-5b7f-43f6-b9ff-0f6177430f74")
 	)
 	(label "LED_brake"
-		(at 377.19 363.22 180)
+		(at 334.01 334.01 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "029ed29d-cacc-4352-8710-5754a1423f78")
-	)
-	(label "LED"
-		(at 347.98 245.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "03969a97-9fa9-4eb4-a6fc-409c5a90bcf1")
-	)
-	(label "LED_brake"
-		(at 347.98 247.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "21e39bb1-f600-4417-9313-2c91ab598e6c")
+		(uuid "0b02f9e8-1e88-4fc7-9a27-3fcbab9f9c60")
 	)
 	(label "S3_Drain"
 		(at 290.83 139.7 0)
@@ -13446,6 +13426,16 @@
 			(justify left bottom)
 		)
 		(uuid "4ef178d2-5b7a-4f8d-8696-87a32cb7ce64")
+	)
+	(label "LED"
+		(at 347.98 247.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5baf5607-627f-45a0-ac1f-daa8c6418dca")
 	)
 	(label "S1_Drain"
 		(at 290.83 113.03 0)
@@ -13487,6 +13477,16 @@
 		)
 		(uuid "75892f35-589a-4f02-b3fa-5587e465918c")
 	)
+	(label "LED_brake"
+		(at 347.98 245.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79241645-fecb-4499-91e0-5423e5919d71")
+	)
 	(label "LED_debug"
 		(at 347.98 255.27 0)
 		(effects
@@ -13496,6 +13496,16 @@
 			(justify left bottom)
 		)
 		(uuid "7ebeeb3e-ca6e-4171-bcbb-8ba0564a8e29")
+	)
+	(label "LED"
+		(at 377.19 363.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "984b747a-a9ce-4b64-9d74-dc56622d59e0")
 	)
 	(label "LED_ccw"
 		(at 347.98 265.43 0)
@@ -13516,16 +13526,6 @@
 			(justify right bottom)
 		)
 		(uuid "d56fdd0a-b487-43e4-a09a-941b60a97f6c")
-	)
-	(label "LED"
-		(at 334.01 334.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dda6335b-c53c-47a2-8d0d-ce6720bda0b3")
 	)
 	(global_label "220V_Line"
 		(shape input)
