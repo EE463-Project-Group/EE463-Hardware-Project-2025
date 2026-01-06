@@ -22,13 +22,13 @@
 #define BTN_FREN  19
 
 // Gösterge LED'leri
-#define LED_CW      4   // İleri Yön Seçim LEDi (Sarı/Yeşil vb.)
-#define LED_CCW     5   // Geri Yön Seçim LEDi (Sarı/Yeşil vb.)
+#define LED_CW      4   // İleri Yön Seçim LEDi
+#define LED_CCW     5   // Geri Yön Seçim LEDi
 
 // Yeni Şematik Düzeni:
-#define LED_ALIVE   22  // "Sistem Alive" - Motor İleri/Geri dönerken yanar
+#define LED_ALIVE   21  // "Disable/Boşta" LEDi - Motor Boşta iken yanar
+#define LED_DEBUG   22  // "Sistem Alive" - Motor İleri/Geri dönerken yanar
 #define LED_BRAKE   23  // Fren LEDi - Sadece Fren anında yanar
-#define LED_DEBUG   21   // "Disable/Boşta" LEDi - Motor Boşta iken yanar (Varsayılan: Dahili LED)
 
 // --- AYARLAR ---
 const int MAX_PWM = 230; // %90 Duty Cycle (Bootstrap Koruması)
@@ -45,7 +45,7 @@ const int yazdirmaAraligi = 200;
 void setup() {
   Serial.begin(115200);
   Serial.println("--- HIBRIT MOTOR KONTROL SISTEMI ---");
-  Serial.println("Kontrol: Butonlar VEYA Serial Monitor");
+  Serial.println("Kontrol: Butonlar (Active HIGH) VEYA Serial Monitor");
   Serial.println("Serial Komutlar: 'i'(Ileri), 'g'(Geri), 'b'/'d'(Dur/Bosta), 'f'(Fren)");
   
   // Güvenli Başlangıç (Pinleri önce LOW yap)
@@ -58,15 +58,17 @@ void setup() {
   pinMode(LED_CW, OUTPUT);
   pinMode(LED_CCW, OUTPUT);
   pinMode(LED_BRAKE, OUTPUT);
-  pinMode(LED_ALIVE, OUTPUT); // Yeni
-  pinMode(LED_DEBUG, OUTPUT); // Yeni
+  pinMode(LED_ALIVE, OUTPUT); 
+  pinMode(LED_DEBUG, OUTPUT); 
 
-  // Dahili Pull-Up Dirençleri
-  pinMode(BTN_ILERI, INPUT_PULLUP);
-  pinMode(BTN_GERI,  INPUT_PULLUP);
-  pinMode(BTN_START, INPUT_PULLUP);
-  pinMode(BTN_STOP,  INPUT_PULLUP);
-  pinMode(BTN_FREN,  INPUT_PULLUP);
+  // BUTON AYARLARI (Active HIGH için PULLDOWN kullanıyoruz)
+  // Not: Butona basılmadığında 0V (LOW) olması için bu gereklidir.
+  // Butonun bir ucu IO pinine, diğer ucu 3.3V'a bağlı olmalı.
+  pinMode(BTN_ILERI, INPUT_PULLDOWN);
+  pinMode(BTN_GERI,  INPUT_PULLDOWN);
+  pinMode(BTN_START, INPUT_PULLDOWN);
+  pinMode(BTN_STOP,  INPUT_PULLDOWN);
+  pinMode(BTN_FREN,  INPUT_PULLDOWN);
 
   bostaBirak();
   ledleriGuncelle();
@@ -74,15 +76,23 @@ void setup() {
 
 void loop() {
   // ---------------------------------------------------------
-  // 1. EN YÜKSEK ÖNCELİK: FİZİKSEL FREN BUTONU
+  // 1. EN YÜKSEK ÖNCELİK: FİZİKSEL FREN BUTONU (Active HIGH)
   // ---------------------------------------------------------
-  if (digitalRead(BTN_FREN) == LOW) { 
+  if (digitalRead(BTN_FREN) == HIGH) { // Basılınca HIGH veriyor
     if (calismaModu != 'f') {
       frenYap();
       calismaModu = 'f';
       frenBasiliMi = true;
     }
     motorSurucusuGuncelle(); // Freni uygula
+    
+    // DÜZELTME 2: Fren basılıyken de serial verisinin akmaya devam etmesi sağlandı.
+    // 'return' etmeden önce yazdırma kontrolü yapıyoruz.
+    if (millis() - sonYazdirmaZamani > yazdirmaAraligi) {
+      bilgiYazdir();
+      sonYazdirmaZamani = millis();
+    }
+    
     delay(10); 
     return; // Fren basılıyken başka komut dinleme!
   } 
@@ -103,9 +113,8 @@ void loop() {
     
     // Geçerli komut kontrolü
     if (gelenVeri == 'i' || gelenVeri == 'g' || gelenVeri == 'f' || 
-        gelenVeri == 'b' || gelenVeri == 'd') { // d veya b durdurur
+        gelenVeri == 'b' || gelenVeri == 'd') { 
       
-      // 'd' gelirse 'b' (boşta) olarak işle
       if (gelenVeri == 'd') gelenVeri = 'b';
 
       // Yön değişimi varsa ölü zaman (Deadtime) uygula
@@ -114,26 +123,24 @@ void loop() {
         delay(100); 
       }
 
-      // Serial'den gelen komuta göre hem modu hem de seçili yönü güncelle
       calismaModu = gelenVeri;
       
       if (gelenVeri == 'i') secilenYon = 'i';
       if (gelenVeri == 'g') secilenYon = 'g';
       
-      ledleriGuncelle(); // Serial'den gelen yönü LED'e yansıt
+      ledleriGuncelle(); 
       
-      // Geri bildirim
       Serial.print("SERIAL KOMUT: "); 
       Serial.println(gelenVeri);
     }
   }
 
   // ---------------------------------------------------------
-  // 3. BUTON KONTROLLERİ
+  // 3. BUTON KONTROLLERİ (Active HIGH)
   // ---------------------------------------------------------
   
   // STOP Butonu
-  if (digitalRead(BTN_STOP) == LOW) {
+  if (digitalRead(BTN_STOP) == HIGH) {
     if (calismaModu != 'b') {
       bostaBirak();
       calismaModu = 'b';
@@ -142,20 +149,23 @@ void loop() {
     }
   }
 
-  // Yön Seçim Butonları (Sadece Hafızayı Değiştirir)
-  if (digitalRead(BTN_ILERI) == LOW) {
+  // DÜZELTME 1: Yön Seçim Butonlarına Serial çıktısı ve debounce eklendi.
+  if (digitalRead(BTN_ILERI) == HIGH) {
     secilenYon = 'i';
     ledleriGuncelle();
+    Serial.println("BUTON: YON SECIMI -> ILERI");
+    delay(200); // Bas-çek kararlılığı için
   }
-  if (digitalRead(BTN_GERI) == LOW) {
+  if (digitalRead(BTN_GERI) == HIGH) {
     secilenYon = 'g';
     ledleriGuncelle();
+    Serial.println("BUTON: YON SECIMI -> GERI");
+    delay(200); // Bas-çek kararlılığı için
   }
 
   // START Butonu
-  if (digitalRead(BTN_START) == LOW) {
+  if (digitalRead(BTN_START) == HIGH) {
     if (calismaModu != secilenYon) {
-      // Yön değişiyorsa Deadtime
       if (calismaModu != 'b') {
         bostaBirak();
         delay(100);
@@ -186,16 +196,15 @@ void motorSurucusuGuncelle() {
   switch (calismaModu) {
     case 'i': ileriSur(pwmHiz); break;
     case 'g': geriSur(pwmHiz); break;
-    case 'f': frenYap(); break;     // PWM'den bağımsız tam fren
+    case 'f': frenYap(); break;     
     case 'b': default: bostaBirak(); break;
   }
   
-  // LED durumlarını her döngüde kontrol et (Yanıp sönme vs. eklenirse burası önemli olur)
   ledleriGuncelle();
 }
 
 void ledleriGuncelle() {
-  // 1. YÖN SEÇİM LEDLERİ (CW/CCW) - Kullanıcı niyeti
+  // 1. YÖN SEÇİM LEDLERİ
   if (secilenYon == 'i') {
     digitalWrite(LED_CW, HIGH);
     digitalWrite(LED_CCW, LOW);
@@ -207,14 +216,14 @@ void ledleriGuncelle() {
   // 2. FREN LEDİ
   digitalWrite(LED_BRAKE, (calismaModu == 'f') ? HIGH : LOW);
 
-  // 3. ALIVE LED (IO22) - Motor dönüyorsa (İleri veya Geri)
+  // 3. ALIVE LED (Motor dönüyorsa)
   if (calismaModu == 'i' || calismaModu == 'g') {
     digitalWrite(LED_ALIVE, HIGH);
   } else {
     digitalWrite(LED_ALIVE, LOW);
   }
 
-  // 4. DEBUG LED (IO2) - Motor "Boşta/Disable" ise
+  // 4. DEBUG LED (Motor boşta ise)
   if (calismaModu == 'b') {
     digitalWrite(LED_DEBUG, HIGH);
   } else {
@@ -237,7 +246,6 @@ void geriSur(int hiz) {
 }
 
 void frenYap() {
-  // Alt MOSFET'ler açık, Üstler kapalı (Short Brake & Bootstrap Charge)
   analogWrite(U1HIN, 0); 
   analogWrite(U2HIN, 0);
   digitalWrite(U1LIN, HIGH); 
@@ -245,7 +253,6 @@ void frenYap() {
 }
 
 void bostaBirak() {
-  // Her şey kapalı (Coasting)
   analogWrite(U1HIN, 0);
   analogWrite(U2HIN, 0);
   digitalWrite(U1LIN, LOW);
